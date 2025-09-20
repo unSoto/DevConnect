@@ -1,216 +1,216 @@
 # 🤖 DevConnect - IT Job Search Telegram Bot
 
-**DevConnect** - это современный Telegram-бот, предназначенный для помощи в поиске работы и сотрудников в сфере IT. Платформа предоставляет удобный интерфейс для создания профилей, просмотра вакансий и резюме, а также управления карьерой.
+**DevConnect** is a modern Telegram bot designed to help with job searching and employee hiring in the IT field. The platform provides a convenient interface for creating profiles, viewing vacancies and resumes, and managing your career.
 
 ![Bot Preview](assets/welcome.png)
 
-## ✨ Возможности
+## ✨ Features
 
-### Для Соискателей 🔍
-- **Создание резюме** - удобная форма для ввода информации о себе
-- **Просмотр вакансий** - навигация по доступным предложениям работы
-- **Управление профилем** - редактирование и удаление резюме
-- **Удобный интерфейс** - интуитивно понятное меню с кнопками
+### For Job Seekers 🔍
+- **Resume Creation** - convenient form for entering personal information
+- **Vacancy Viewing** - navigation through available job offers
+- **Profile Management** - editing and deleting resumes
+- **User-Friendly Interface** - intuitive menu with buttons
 
-### Для Работодателей 🏢
-- **Создание вакансий** - детальное описание позиции и требований
-- **Просмотр резюме** - поиск подходящих кандидатов
-- **Управление вакансиями** - редактирование и удаление объявлений
-- **Контактная информация** - прямые контакты для связи
+### For Employers 🏢
+- **Vacancy Creation** - detailed job description and requirements
+- **Resume Viewing** - searching for suitable candidates
+- **Vacancy Management** - editing and deleting job postings
+- **Contact Information** - direct contacts for communication
 
-## 🚀 Быстрый старт
+## 🚀 Quick Start
 
-### ⚙️ Настройка после загрузки
+### ⚙️ Setup After Upload
 
-1. **Получите токен бота:**
-   - Напишите [@BotFather](https://t.me/botfather) в Telegram
-   - Отправьте `/newbot` и следуйте инструкциям
-   - Сохраните полученный токен
+1. **Get bot token:**
+   - Write to [@BotFather](https://t.me/botfather) in Telegram
+   - Send `/newbot` and follow instructions
+   - Save the received token
 
-2. **Создайте файл config.py:**
+2. **Create config.py file:**
    ```python
-   # Основная конфигурация
+   # Main configuration
    import os
-   API_TOKEN = os.getenv("API_TOKEN", "ВАШ_ТОКЕН_ЗДЕСЬ")
+   API_TOKEN = os.getenv("API_TOKEN", "YOUR_TOKEN_HERE")
    ```
 
-3. **Или используйте переменные окружения:**
+3. **Or use environment variables:**
    ```bash
-   export API_TOKEN="ваш_токен"
+   export API_TOKEN="your_token"
    python src/main.py
    ```
 
-### Предварительные требования
+### Prerequisites
 - Python 3.11+
-- Telegram Bot Token (получить у [@BotFather](https://t.me/botfather))
+- Telegram Bot Token (get from [@BotFather](https://t.me/botfather))
 
-### Установка
+### Installation
 
-1. **Клонируйте репозиторий:**
+1. **Clone the repository:**
    ```bash
    git clone <repository-url>
    cd DevConnect
    ```
 
-2. **Создайте виртуальное окружение:**
+2. **Create virtual environment:**
    ```bash
    python -m venv .venv
    source .venv/bin/activate  # Linux/Mac
-   # или
+   # or
    .venv\Scripts\activate     # Windows
    ```
 
-3. **Установите зависимости:**
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. **Настройте бота:**
-   - Откройте `src/config.py`
-   - Замените `API_TOKEN` на ваш токен от BotFather
+4. **Configure the bot:**
+   - Open `src/config.py`
+   - Replace `API_TOKEN` with your token from BotFather
 
-5. **Запустите бота:**
+5. **Run the bot:**
    ```bash
    python src/main.py
    ```
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
 DevConnect/
-├── assets/                 # Графические ресурсы
-│   ├── welcome.png        # Приветственное изображение
-│   ├── resume.png         # Изображение для резюме
-│   └── vacancy.png        # Изображение для вакансий
+├── assets/                 # Graphic resources
+│   ├── welcome.png        # Welcome image
+│   ├── resume.png         # Resume image
+│   └── vacancy.png        # Vacancy image
 ├── src/
-│   ├── main.py           # Точка входа приложения
-│   ├── config.py         # Конфигурация (API токен)
-│   ├── db.py            # Работа с базой данных
-│   ├── utils.py         # Вспомогательные функции
-│   └── handlers/        # Обработчики команд
-│       ├── welcome.py   # Приветственное меню
-│       ├── seeker.py    # Функционал соискателя
-│       └── employer.py  # Функционал работодателя
-├── requirements.txt     # Зависимости Python
-├── devconnect.db       # База данных SQLite
-└── README.md           # Документация
+│   ├── main.py           # Application entry point
+│   ├── config.py         # Configuration (API token)
+│   ├── db.py            # Database operations
+│   ├── utils.py         # Helper functions
+│   └── handlers/        # Command handlers
+│       ├── welcome.py   # Welcome menu
+│       ├── seeker.py    # Job seeker functionality
+│       └── employer.py  # Employer functionality
+├── requirements.txt     # Python dependencies
+├── devconnect.db       # SQLite database
+└── README.md           # Documentation
 ```
 
-## 🎯 Использование
+## 🎯 Usage
 
-### Начало работы
-1. Запустите бота командой `/start`
-2. Выберите роль: **"🔎 Найти работу"** или **"🧑‍💼 Найти сотрудника"**
-3. Следуйте инструкциям в меню
+### Getting Started
+1. Start the bot with `/start` command
+2. Choose role: **"🔎 Find Work"** or **"🧑‍💼 Find Employee"**
+3. Follow the menu instructions
 
-### Для Соискателей
+### For Job Seekers
 
-**Создание резюме:**
-- Нажмите "📝 Создать резюме"
-- Заполните информацию:
-  - Имя
-  - Специализация
-  - Опыт работы
-  - Навыки
-  - Контакты
+**Creating Resume:**
+- Click "📝 Create Resume"
+- Fill in information:
+  - Name
+  - Specialization
+  - Work experience
+  - Skills
+  - Contacts
 
-**Просмотр вакансий:**
-- Нажмите "📋 Просмотр вакансий"
-- Используйте кнопки навигации ⬅️➡️ для просмотра
-- Каждая вакансия содержит:
-  - Название компании
-  - Должность
-  - Описание требований
-  - Условия работы
-  - Контакты
+**Viewing Vacancies:**
+- Click "📋 View Vacancies"
+- Use navigation buttons ⬅️➡️ to browse
+- Each vacancy contains:
+  - Company name
+  - Position
+  - Job requirements
+  - Work conditions
+  - Contacts
 
-### Для Работодателей
+### For Employers
 
-**Создание вакансии:**
-- Нажмите "📝 Создать вакансию"
-- Заполните информацию:
-  - Название компании
-  - Должность
-  - Требования к кандидату
-  - Условия работы
-  - Контакты
+**Creating Vacancy:**
+- Click "📝 Create Vacancy"
+- Fill in information:
+  - Company name
+  - Position
+  - Candidate requirements
+  - Work conditions
+  - Contacts
 
-**Просмотр резюме:**
-- Нажмите "👥 Просмотр резюме"
-- Просматривайте анкеты кандидатов
-- Каждая анкета содержит:
-  - Имя специалиста
-  - Специализация
-  - Опыт работы
-  - Навыки
-  - Контакты
+**Viewing Resumes:**
+- Click "👥 View Resumes"
+- Browse candidate profiles
+- Each profile contains:
+  - Specialist name
+  - Specialization
+  - Work experience
+  - Skills
+  - Contacts
 
-## ⚙️ Конфигурация
+## ⚙️ Configuration
 
-### Получение API токена
-1. Напишите [@BotFather](https://t.me/botfather) в Telegram
-2. Отправьте команду `/newbot`
-3. Выберите имя для бота
-4. Скопируйте полученный токен
-5. Вставьте токен в `src/config.py`
+### Getting API Token
+1. Write to [@BotFather](https://t.me/botfather) in Telegram
+2. Send `/newbot` command
+3. Choose bot name
+4. Copy the received token
+5. Paste token into `src/config.py`
 
-### Настройка базы данных
-База данных SQLite создается автоматически при первом запуске. Она содержит:
-- Таблицу `resumes` для резюме соискателей
-- Таблицу `vacancies` для вакансий работодателей
-- Тестовые данные для демонстрации
+### Database Setup
+SQLite database is created automatically on first launch. It contains:
+- `resumes` table for job seeker resumes
+- `vacancies` table for employer vacancies
+- Test data for demonstration
 
-## 🛠️ Технологии
+## 🛠️ Technologies
 
-- **Python 3.11+** - основной язык программирования
-- **aiogram 3.22.0** - фреймворк для Telegram-ботов
-- **SQLite** - встроенная база данных
-- **magic-filter** - для фильтрации сообщений
-- **aiofiles** - асинхронная работа с файлами
-- **aiohttp** - HTTP клиент
-- **pydantic** - валидация данных
+- **Python 3.11+** - main programming language
+- **aiogram 3.22.0** - framework for Telegram bots
+- **SQLite** - built-in database
+- **magic-filter** - for message filtering
+- **aiofiles** - asynchronous file operations
+- **aiohttp** - HTTP client
+- **pydantic** - data validation
 
-## 📊 Возможности развития
+## 📊 Development Opportunities
 
-- [ ] **Матчинг** - автоматический подбор вакансий/кандидатов
-- [ ] **Фильтры** - поиск по технологиям, опыту, зарплате
-- [ ] **Уведомления** - оповещения о новых вакансиях/резюме
-- [ ] **Админ-панель** - управление ботом через веб-интерфейс
-- [ ] **Статистика** - аналитика использования бота
-- [ ] **Многоязычность** - поддержка нескольких языков
-- [ ] **Интеграции** - связь с HH.ru, LinkedIn и другими платформами
+- [ ] **Matching** - automatic job/candidate matching
+- [ ] **Filters** - search by technologies, experience, salary
+- [ ] **Notifications** - alerts about new vacancies/resumes
+- [ ] **Admin Panel** - web interface for bot management
+- [ ] **Statistics** - usage analytics
+- [ ] **Multilingual** - support for multiple languages
+- [ ] **Integrations** - connection with HH.ru, LinkedIn and other platforms
 
-## 🤝 Вклад в проект
+## 🤝 Contributing
 
-1. Сделайте fork репозитория
-2. Создайте ветку для новой функции (`git checkout -b feature/new-feature`)
-3. Закоммитьте изменения (`git commit -am 'Add new feature'`)
-4. Отправьте изменения (`git push origin feature/new-feature`)
-5. Создайте Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/new-feature`)
+3. Commit changes (`git commit -am 'Add new feature'`)
+4. Push changes (`git push origin feature/new-feature`)
+5. Create Pull Request
 
-## 📄 Лицензия
+## 📄 License
 
-Этот проект распространяется под **лицензией DevConnect** с ограничениями.
+This project is distributed under the **DevConnect License** with restrictions.
 
-### ✅ **РАЗРЕШЕНО БЕСПЛАТНО:**
-- Скачивание и личное использование
-- Изучение кода для обучения
-- Демонстрация в портфолио (с указанием автора)
-- Распространение оригинальной версии
+### ✅ **ALLOWED FOR FREE:**
+- Downloading and personal use
+- Studying code for educational purposes
+- Demonstrating in portfolio (with author attribution)
+- Distributing original version
 
-### ❌ **ЗАПРЕЩЕНО БЕЗ СОГЛАСИЯ АВТОРА:**
-- Коммерческое использование
-- Модификация кода
-- Создание производных продуктов
-- Присвоение авторства
+### ❌ **PROHIBITED WITHOUT AUTHOR CONSENT:**
+- Commercial use
+- Code modification
+- Creating derivative products
+- Attribution theft
 
-**Подробности в файле `LICENSE`.**
+**Details in `LICENSE` file.**
 
-## 📞 Контакты
+## 📞 Contacts
 
 - **Telegram:** [@worksoto](https://t.me/worksoto)
 - **Email:** vlskrauch@mail.ru
 
 ---
 
-**DevConnect** - ваш надежный помощник в мире IT-карьеры! 🚀
+**DevConnect** - your reliable assistant in the world of IT career! 🚀
