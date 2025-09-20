@@ -37,7 +37,7 @@ async def seeker_menu(message: Message):
 
 @seeker_router.callback_query(F.data == "create_resume")
 async def create_resume_callback(callback: CallbackQuery, state: FSMContext):
-    await callback.message.delete()  # Удаляем предыдущее сообщение
+    await callback.message.delete()
     user_id = callback.from_user.id
     resume = get_resume(user_id)
     if resume:
@@ -60,14 +60,13 @@ async def create_resume_callback(callback: CallbackQuery, state: FSMContext):
 async def resume_name(message: Message, state: FSMContext):
     await message.delete()
 
-    # Удаляем предыдущее сообщение бота
     data = await state.get_data()
     last_bot_msg_id = data.get("last_bot_message_id")
     if last_bot_msg_id:
         try:
             await message.bot.delete_message(message.chat.id, last_bot_msg_id)
         except:
-            pass  # Игнорируем ошибки удаления
+            pass
 
     await state.update_data(name=message.text)
     msg = await message.answer("👤 <b>Создание резюме</b>\n\n🎯 Введите вашу специализацию:")
@@ -76,16 +75,15 @@ async def resume_name(message: Message, state: FSMContext):
 
 @seeker_router.message(ResumeForm.specialization)
 async def resume_specialization(message: Message, state: FSMContext):
-    await message.delete()  # Удаляем сообщение пользователя
+    await message.delete()
 
-    # Удаляем предыдущее сообщение бота
     data = await state.get_data()
     last_bot_msg_id = data.get("last_bot_message_id")
     if last_bot_msg_id:
         try:
             await message.bot.delete_message(message.chat.id, last_bot_msg_id)
         except:
-            pass  # Игнорируем ошибки удаления
+            pass
 
     await state.update_data(specialization=message.text)
     msg = await message.answer("👤 <b>Создание резюме</b>\n\n💼 Укажите ваш опыт работы:")
@@ -94,16 +92,15 @@ async def resume_specialization(message: Message, state: FSMContext):
 
 @seeker_router.message(ResumeForm.experience)
 async def resume_experience(message: Message, state: FSMContext):
-    await message.delete()  # Удаляем сообщение пользователя
+    await message.delete()
 
-    # Удаляем предыдущее сообщение бота
     data = await state.get_data()
     last_bot_msg_id = data.get("last_bot_message_id")
     if last_bot_msg_id:
         try:
             await message.bot.delete_message(message.chat.id, last_bot_msg_id)
         except:
-            pass  # Игнорируем ошибки удаления
+            pass
 
     await state.update_data(experience=message.text)
     msg = await message.answer("👤 <b>Создание резюме</b>\n\n🛠️ Укажите ваши ключевые навыки:")
@@ -112,9 +109,8 @@ async def resume_experience(message: Message, state: FSMContext):
 
 @seeker_router.message(ResumeForm.skills)
 async def resume_skills(message: Message, state: FSMContext):
-    await message.delete()  # Удаляем сообщение пользователя
+    await message.delete()
 
-    # Удаляем предыдущее сообщение бота
     data = await state.get_data()
     last_bot_msg_id = data.get("last_bot_message_id")
     if last_bot_msg_id:
@@ -130,9 +126,8 @@ async def resume_skills(message: Message, state: FSMContext):
 
 @seeker_router.message(ResumeForm.contacts)
 async def resume_contacts(message: Message, state: FSMContext):
-    await message.delete()  # Удаляем сообщение пользователя
+    await message.delete()
 
-    # Удаляем предыдущее сообщение бота
     data = await state.get_data()
     last_bot_msg_id = data.get("last_bot_message_id")
     if last_bot_msg_id:
