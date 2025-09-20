@@ -1,0 +1,52 @@
+# База данных
+*.db
+*.sqlite
+*.sqlite3
+devconnect.db
+
+# Виртуальное окружение Python
+.venv/
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Конфиденциальные данные
+.env
+.env.local
+.env.production
+config.local.py
+
+# Логи
+*.log
+logs/
+
+# Временные файлы
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+*.pyo
+
+# Установленные пакеты
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Токены и ключи API
+src/config.py
+*.key
+*.pem
+
+# Бэкапы
+*.bak
+*.backup
